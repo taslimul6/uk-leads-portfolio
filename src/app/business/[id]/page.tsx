@@ -4,6 +4,11 @@ import { getBusinessById, getAllBusinesses } from "@/lib/data";
 import StarRating from "@/components/StarRating";
 import BusinessCard from "@/components/BusinessCard";
 
+export async function generateStaticParams() {
+  const businesses = getAllBusinesses();
+  return businesses.map((b) => ({ id: String(b.id) }));
+}
+
 interface Props {
   params: { id: string };
 }
