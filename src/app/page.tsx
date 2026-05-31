@@ -6,6 +6,7 @@ import {
   getCategories,
 } from "@/lib/data";
 import BusinessCard from "@/components/BusinessCard";
+import Gallery from "@/components/Gallery";
 
 
 export default function HomePage() {
@@ -134,6 +135,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      <Gallery />
 
       {/* Cities Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
